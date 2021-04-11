@@ -232,8 +232,8 @@ void CreateGenericHIDReport(Joystick_t* const ReportData)
 
 	memset(ReportData, 0, sizeof(Joystick_t));
 
-	ReportData->X      = (Rotary_GetDirection(1) * 100);
-	ReportData->Y      = (Rotary_GetDirection(0) * 100);
+	ReportData->X      = (Rotary_GetDirection(0) * 100);
+	ReportData->Y      = (Rotary_GetDirection(1) * 100);
 
 	ReportData->Slider =  Rotary_GetPosition(1);
 	ReportData->Dial   =  Rotary_GetPosition(0);
